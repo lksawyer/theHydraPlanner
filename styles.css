@@ -1,0 +1,137 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	/*So .full-height will work*/
+	height: 100%; 
+	font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+	width: 70px;
+	background-color: rgb(47,50,58);
+	float: left;
+}
+
+.full-height {
+	height: 100%;
+}
+
+#content-wrapper {
+	/*Allows our content to take up 100% of screen - nav width*/
+	width: calc(100% - 70px);
+	float: right;
+}
+
+header {
+	height: 150px;
+	background-color: rgb(255,255,255)
+	border: 1px solid black;
+}
+
+main {
+	/*Allows main to take up 100% of screen - header height*/
+	height: calc(100% - 150px);
+	background-color: rgb(237,239,245);
+	overflow: hidden;
+}
+
+/*Header
+=========================*/
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+	width: 30%;
+	height: 75px;
+	line-height: 75px;
+	font-size: 1em;
+	text-align: center;
+}
+
+i, #sign-out {
+	cursor: pointer;
+}
+
+/*Calendar Content
+=========================*/
+
+#calendar-content {
+	padding: 20px;
+}
+
+#add-calendar-event {
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+
+#calendar-content section {
+	width: 50%;
+}
+
+#event-container {
+	overflow-y: scroll;
+	height: 500px;
+}
+
+.event {
+
+	min-height: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(255,255,255);
+    border-radius: 4px;
+    font-size: 1em;
+   
+}
+
+.event-header {
+	text-align: right;
+	border-bottom: 2px solid rgb(237,239,245);
+	margin-bottom: 20px
+}
+
+
+#event-details {
+
+	height: 500px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(255,255,255);
+    border-radius: 4px;
+    background-color: darkgray;
+}
+
+#event-details-header {
+	text-align: center;
+}
+
+/*Button
+=========================*/
+
+button {
+	background-color: rgb(255,255,255);
+	border: none;
+}
+
+
+
+
+
+
+

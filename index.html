@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!-- Font Awesome -->
+	<script src="https://use.fontawesome.com/8bd1051b89.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="clearfix full-height">
+		<nav class="full-height float-left">
+			
+		</nav>
+		<div id="content-wrapper" class="full-height float-right">
+			<header>
+				<ul class="flex-container">
+					<li class="flex-item">Calendar</li>
+					<li class="flex-item"><span id="weather-icon"></span>&nbsp|&nbsp<span id="temp"></span>&nbsp|&nbsp<span id="clock"></span></li>
+					<li id="sign-out" class="flex-item">
+						<!-- Google API -->
+						<button id="signin-button" style="display: none;">Authorize</button>
+						<button id="signout-button" style="display: none;">Sign Out</button>
+					</li>
+					<li class="flex-item"><i class="fa fa-arrow-circle-left" aria-hidden="true" onclick="decrementDate()"></i>&nbsp&nbsp<span id="calendar-date">Date</span>&nbsp&nbsp<i class="fa fa-arrow-circle-right" aria-hidden="true" onclick="incrementDate()"></i></li>
+				</ul>
+			</header>
+			<main>
+				<div id="calendar-content">
+					<div id="add-calendar-event">
+						<i class="fa fa-plus-circle fa-2x" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Add Event"></i>
+					</div>
+					<div class="row">
+						<section id="event-container" class="col-sm-6">
+							Plese sign in to get upcoming events
+							<!-- Example Formatting -->
+							<!-- <div class="event">
+								<div class="event-header">
+									<i class="fa fa-pencil" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Edit Event"></i>
+								</div>
+								<div>
+									8:00 am | Dentist Apointment
+								</div>
+							</div> -->
+						</section>
+						<section class="col-sm-6">
+							<div id="event-details">
+								<div id="event-details-header">
+									Additional Details
+								</div>
+							</div>
+						</section>
+						
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+	<!-- Google API -->
+	<!-- <button id="signin-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
+
+    <pre id="content"></pre> -->
+	<!-- jQuery -->
+	<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous">
+  	</script>
+  	<!-- ajax -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<!-- Our app -->
+  	<script type="text/javascript" src="app.js"></script>
+  	<!-- Google API Auth -->
+  	<script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+</body>
+</html>
